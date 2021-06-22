@@ -14,7 +14,6 @@ function Hero() {
   const [aqi, setAqi] = useState("");
   const [forecast, setForecast] = useState([]);
   useEffect(() => {
-    document.body.style.zoom = "90%";
     const fetchLocation = async () => {
       let err;
       //ip
