@@ -5,7 +5,6 @@ import axios from "axios";
 import Loader from "./Loader";
 
 function Hero() {
-  const ipApi = import.meta.env.VITE_IP_API;
   const weatherApi = import.meta.env.VITE_WEATHER_API;
   //states
   const [location, setLocation] = useState("");
@@ -18,15 +17,13 @@ function Hero() {
       let err;
       //ip
       let res = await axios
-        .get(`https://geo.ipify.org/api/v1?apiKey=${ipApi}`)
+        .get(`https://ipapi.co/json`)
         .catch((e) => (err = e));
-      setLocation(
-        res.data.location.city + `, ` + res.data.location.region + `.`
-      );
+      setLocation(res.data.city + `, ` + res.data.region + `.`);
       //weather
       const res1 = await axios
         .get(
-          `http://api.weatherapi.com/v1/forecast.json?key=${weatherApi}&q=${res.data.location.city}&days=5&aqi=yes&alerts=no`
+          `http://api.weatherapi.com/v1/forecast.json?key=${weatherApi}&q=${res.data.city}&days=5&aqi=yes&alerts=no`
         )
         .catch((e) => (err = e));
       err && console.log(err);
