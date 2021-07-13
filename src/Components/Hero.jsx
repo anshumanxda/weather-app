@@ -6,10 +6,6 @@ import Loader from "./Loader";
 import Month from "number-to-date-month-name";
 
 function Hero() {
-  //get month
-  const month = new Date().getMonth();
-  console.log(month);
-
   const weatherApi = import.meta.env.VITE_WEATHER_API;
   //states
   const [location, setLocation] = useState("");
