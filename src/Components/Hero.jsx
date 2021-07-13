@@ -3,8 +3,13 @@ import Axios from "axios";
 import "./style.css";
 import axios from "axios";
 import Loader from "./Loader";
+import Month from "number-to-date-month-name";
 
 function Hero() {
+  //get month
+  const month = new Date().getMonth();
+  console.log(month);
+
   const weatherApi = import.meta.env.VITE_WEATHER_API;
   //states
   const [location, setLocation] = useState("");
@@ -68,7 +73,9 @@ function Hero() {
             {forecast.map((day) => {
               return (
                 <div>
-                  <p className="next-day-date">{day.date.slice(8)} June </p>
+                  <p className="next-day-date">
+                    {day.date.slice(8)} {Month.toMonth(day.date.slice(5, 7))}
+                  </p>
                   <p className="next-day-temp">Max: {day.day.maxtemp_c} ° C</p>
                   <p className="next-day-temp">Min: {day.day.mintemp_c} ° C</p>
                 </div>
