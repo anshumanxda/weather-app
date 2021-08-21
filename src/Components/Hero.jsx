@@ -73,7 +73,9 @@ function Hero() {
                     {day.date.slice(8)} {Month.toMonth(day.date.slice(5, 7))}
                   </p>
                   <p className="next-day-temp">Max: {day.day.maxtemp_c} ° C</p>
-                  <p className="next-day-temp">Min: {day.day.mintemp_c} ° C</p>
+                  <p className="next-day-temp">
+                    Min: {day.day.mintemp_c} &deg; C
+                  </p>
                 </div>
               );
             })}

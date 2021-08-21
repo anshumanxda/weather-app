@@ -92,6 +92,68 @@ img {
 
 /* Media queries */
 
+/* 1366 device */
+@media only screen and (max-device-width: 1366px) {
+  .main-container > h1 {
+    padding: 0.5rem;
+    font-size: 4.1rem;
+  }
+
+  .main-container > h3 {
+    padding: 1.5rem 0 0 0;
+    font-size: 2.2rem;
+  }
+
+  .weather-info {
+    justify-content: space-evenly;
+    padding: 4rem;
+  }
+  .temp {
+    height: 200px;
+    width: 250px;
+  }
+
+  .temp-celsius .temp-value {
+    padding-top: 1.5rem;
+    padding-left: 1.2rem;
+    font-size: 1.8rem;
+  }
+
+  .temp-celsius .temp-text {
+    padding: 1rem 0 0 2rem;
+    width: 70%;
+    font-size: 1.2rem;
+  }
+
+  .air-quality {
+    height: 200px;
+    width: 250px;
+  }
+
+  .air-quality p {
+    font-size: 1.5rem;
+  }
+
+  .next-days {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  .next-days > div {
+    height: 200px;
+    width: 200px;
+  }
+
+  .next-day-date {
+    font-size: 1.5rem;
+  }
+
+  .next-day-temp {
+    font-size: 1.5rem;
+  }
+}
+
+/* small devices */
+
 @media only screen and (max-device-width: 600px) {
   body {
     min-height: 200vh;
